@@ -7,7 +7,7 @@ LOCAL_SRC_FILES :=     \
         slesutResult.c
 
 LOCAL_C_INCLUDES:= \
-        system/media/opensles/include
+		frameworks/wilhelm/include
 
 LOCAL_CFLAGS += -fvisibility=hidden
 
@@ -113,7 +113,7 @@ LOCAL_SRC_FILES += \
 
 LOCAL_C_INCLUDES:=                                                  \
         $(JNI_H_INCLUDE)                                            \
-        system/media/opensles/include
+		frameworks/wilhelm/include
 
 # comment out for USE_BACKPORT
 LOCAL_C_INCLUDES += \
@@ -128,6 +128,7 @@ LOCAL_STATIC_LIBRARIES += \
         libOpenSLESUT
 
 LOCAL_SHARED_LIBRARIES :=         \
+        liblog                    \
         libutils                  \
         libmedia                  \
         libbinder
